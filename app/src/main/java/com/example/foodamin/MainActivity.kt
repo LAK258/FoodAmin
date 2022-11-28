@@ -3,9 +3,6 @@ package com.example.foodamin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.Toast
 import com.example.foodamin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,9 +18,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(barcodeScanning)
         }
 
-//        binding.btn2.setOnClickListener{
-//            val barcodeScanningML = Intent(this, BarcodeScanningML::class.java)
-//            startActivity(barcodeScanningML)
-//        }
+        binding.btn2.setOnClickListener{
+            val database = Intent(this, DatabaseActivity::class.java)
+            startActivity(database)
+        }
     }
 }
