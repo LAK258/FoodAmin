@@ -1,0 +1,76 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a5dbf17d249a21e523e2c6849cacf414",
+    "entities": [
+      {
+        "tableName": "Food",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`FoedevareNavn` TEXT, `FoodName` TEXT, `FoodID` INTEGER NOT NULL, `Taxonomi` TEXT, `FoodEx2Code` TEXT, `FoodGroupID` INTEGER, `FoedevareGruppe` TEXT, `FoodGroup` TEXT, PRIMARY KEY(`FoodID`))",
+        "fields": [
+          {
+            "fieldPath": "FoedevareNavn",
+            "columnName": "FoedevareNavn",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FoodName",
+            "columnName": "FoodName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FoodID",
+            "columnName": "FoodID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Taxonomi",
+            "columnName": "Taxonomi",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FoodEx2Code",
+            "columnName": "FoodEx2Code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FoodGroupID",
+            "columnName": "FoodGroupID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FoedevareGruppe",
+            "columnName": "FoedevareGruppe",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FoodGroup",
+            "columnName": "FoodGroup",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "FoodID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a5dbf17d249a21e523e2c6849cacf414')"
+    ]
+  }
+}

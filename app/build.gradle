@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+
 }
 
 android {
@@ -9,6 +11,12 @@ android {
 
     buildFeatures {
         viewBinding true
+    }
+
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas")
+        }
     }
 
     defaultConfig {
@@ -56,5 +64,12 @@ dependencies {
     implementation 'com.fasterxml:aalto-xml:1.2.2'
 
     implementation 'com.android.volley:volley:1.2.1'
+
+    // Room
+    implementation 'androidx.room:room-runtime:2.4.3'
+    kapt 'androidx.room:room-compiler:2.4.3'
+    implementation 'androidx.room:room-ktx:2.4.3' // Kotlin Extensions and Coroutines support for Room
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1' // LifecycleScope
+
 
 }
