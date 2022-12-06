@@ -15,11 +15,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater) // connects the binding variable to the layout file
         setContentView(binding.root) // set which layout file to view
 
-        var db = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"Foodtest11")
-            .createFromAsset("databases/Food.sql")
+        var foodDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"Foodtest21")
+            .createFromAsset("databases/Food.db")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
+
+        var vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"Foodtest22")
+            .createFromAsset("databases/Vitamins.db")
+            .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .build()
+
+
+        val foodDao = foodDB.foodDao().getAll()
+        val vitaminsDao = vitaminDB.VitaminsDao().getAll()
 
         binding.btn.setOnClickListener{
             val barcodeScanning = Intent(this, BarcodeScanningActivity::class.java)
@@ -28,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btn2.setOnClickListener{
 
-            Toast.makeText(this, "${db.foodDao().getAll()}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "${vitaminsDao[0].Barcode}", Toast.LENGTH_LONG).show()
 //              val database = Intent(this, DatabaseActivity::class.java)
 //              startActivity(database)
         }

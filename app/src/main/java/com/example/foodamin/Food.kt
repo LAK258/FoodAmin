@@ -1,33 +1,58 @@
 package com.example.foodamin
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
 data class Food (
 
-    @ColumnInfo(name ="FoedevareNavn")
     var FoedevareNavn: String?,
 
-    @ColumnInfo (name ="FoodName")
     var FoodName: String?,
 
     @PrimaryKey var FoodID: Int,
 
-    @ColumnInfo (name ="Taxonomi")
-    var Taxonomi: String?,
+    var EnergiKcal: Int?,
 
-    @ColumnInfo (name ="FoodEx2Code")
-    var FoodEx2Code: String?,
+    var Avitamin: Int?,
 
-    @ColumnInfo (name ="FoodGroupID")
-    var FoodGroupID: Int?,
+    var Dvitamin: Int?,
 
-    @ColumnInfo (name ="FoedevareGruppe")
-    var FoedevareGruppe: String?,
+    var D3vitamin: Int?,
 
-    @ColumnInfo (name ="FoodGroup")
-    var FoodGroup: String?,
+    var D2vitamin: Int?,
 
+    var hydroxyD3vitamin: Int?,
+
+    var hydroxyD2vitamin: Int?,
+
+    var Evitamin: Int?,
+
+    var K1vitamin: Int?,
+
+    var ThiaminB1vitamin: Int?,
+
+    var Thiamin: Int?,
+
+    var hydroxyethylthiamin: Int?,
+
+    var RiboflavinB2vitamin: Int?,
+
+    var Niacinaekvivalent: Int?,
+
+    var Niacin: Int?,
+
+    var B6vitamin: Int?,
+
+    var Pantothensyre: Int?,
+
+    var Biotin: Int?,
+
+    var Folat: Int?,
+
+    var Fritfolat: Int?,
+
+    var B12vitamin: Int?,
+
+    var Cvitamin: Int?,
     )

@@ -16,6 +16,4 @@ interface FoodDao {
     @Insert
     fun insertAll(vararg foods: Food)
 
-    @Delete
-    fun delete(user: Food)
 }
