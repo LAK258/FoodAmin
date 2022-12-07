@@ -1,37 +1,27 @@
 package com.example.foodamin
 
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity
 data class Vitamins (
 
-    @PrimaryKey var Barcode: Long,
+    @PrimaryKey
+    var IndexID: Int,
 
-    var VitaminName: String?,
+    var Barcode: Long,
 
-    var DVitamin: Int?,
+    var VitaminProduct: String,
 
-    var AVitamin: Int?,
+    var Vitamin: String,
 
-    var CVitamin: Int?,
+    var Unit: Int,
 
-    var B12Vitamin: Int?,
+    var RI: Int?,
 
-    var B6Vitamin: Int?,
+    var SourceID: Int,
 
-    var Thiamin: Int?,
+    var Contains: Int,
 
-    var EVitamin: Int?,
-
-    var Riboflavin: Int?,
-
-    var Niacin: Int?,
-
-    var Folsyre: Int?,
-
-    var Biotin: Int?,
-
-    var Panthothensyre: Int?,
-
-)
+    )

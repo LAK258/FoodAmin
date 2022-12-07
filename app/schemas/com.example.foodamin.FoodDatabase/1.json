@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "e8b23ed048d5ba3b63c855317146c1dc",
+    "identityHash": "6863f2c425e1e404745816c9ed188fac",
     "entities": [
       {
         "tableName": "Food",
@@ -170,8 +170,14 @@
       },
       {
         "tableName": "Vitamins",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`Barcode` INTEGER NOT NULL, `VitaminName` TEXT, `DVitamin` INTEGER, `AVitamin` INTEGER, `CVitamin` INTEGER, `B12Vitamin` INTEGER, `B6Vitamin` INTEGER, `Thiamin` INTEGER, `EVitamin` INTEGER, `Riboflavin` INTEGER, `Niacin` INTEGER, `Folsyre` INTEGER, `Biotin` INTEGER, `Panthothensyre` INTEGER, PRIMARY KEY(`Barcode`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`IndexID` INTEGER NOT NULL, `Barcode` INTEGER NOT NULL, `VitaminProduct` TEXT NOT NULL, `Vitamin` TEXT NOT NULL, `Unit` INTEGER NOT NULL, `RI` INTEGER, `SourceID` INTEGER NOT NULL, `Contains` INTEGER NOT NULL, PRIMARY KEY(`IndexID`))",
         "fields": [
+          {
+            "fieldPath": "IndexID",
+            "columnName": "IndexID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
           {
             "fieldPath": "Barcode",
             "columnName": "Barcode",
@@ -179,87 +185,45 @@
             "notNull": true
           },
           {
-            "fieldPath": "VitaminName",
-            "columnName": "VitaminName",
+            "fieldPath": "VitaminProduct",
+            "columnName": "VitaminProduct",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
-            "fieldPath": "DVitamin",
-            "columnName": "DVitamin",
+            "fieldPath": "Vitamin",
+            "columnName": "Vitamin",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Unit",
+            "columnName": "Unit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RI",
+            "columnName": "RI",
             "affinity": "INTEGER",
             "notNull": false
           },
           {
-            "fieldPath": "AVitamin",
-            "columnName": "AVitamin",
+            "fieldPath": "SourceID",
+            "columnName": "SourceID",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
-            "fieldPath": "CVitamin",
-            "columnName": "CVitamin",
+            "fieldPath": "Contains",
+            "columnName": "Contains",
             "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "B12Vitamin",
-            "columnName": "B12Vitamin",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "B6Vitamin",
-            "columnName": "B6Vitamin",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "Thiamin",
-            "columnName": "Thiamin",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "EVitamin",
-            "columnName": "EVitamin",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "Riboflavin",
-            "columnName": "Riboflavin",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "Niacin",
-            "columnName": "Niacin",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "Folsyre",
-            "columnName": "Folsyre",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "Biotin",
-            "columnName": "Biotin",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "Panthothensyre",
-            "columnName": "Panthothensyre",
-            "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           }
         ],
         "primaryKey": {
           "columnNames": [
-            "Barcode"
+            "IndexID"
           ],
           "autoGenerate": false
         },
@@ -270,7 +234,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e8b23ed048d5ba3b63c855317146c1dc')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6863f2c425e1e404745816c9ed188fac')"
     ]
   }
 }
