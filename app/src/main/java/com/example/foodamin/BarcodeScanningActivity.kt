@@ -1,6 +1,7 @@
 package com.example.foodamin
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -97,11 +98,9 @@ class BarcodeScanningActivity : AppCompatActivity() {
                 if (barcodes.size() == 1) {
                     scannedValue = barcodes.valueAt(0).rawValue
 
-
                     //Don't forget to add this line printing value or finishing activity must run on main thread
                     runOnUiThread {
                         cameraSource.stop()
-                        Toast.makeText(this@BarcodeScanningActivity, "value $scannedValue", Toast.LENGTH_LONG).show()
                         finish()
                     }
                 }else
@@ -137,8 +136,12 @@ class BarcodeScanningActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+
         super.onDestroy()
         cameraSource.stop()
+        val database = Intent(this, DatabaseActivity::class.java)
+        intent.putExtra("Test",scannedValue)
+        startActivity(database)
     }
 }
 
