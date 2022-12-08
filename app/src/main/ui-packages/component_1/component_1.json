@@ -1,0 +1,164 @@
+{
+  "name": "component_1",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "c0Z6b13iIGnqDQc6xeRQZL",
+    "node": "186:74",
+    "version": "2720230839"
+  },
+  "default": "Component 1",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 99"
+      },
+      {
+        "type": "text",
+        "id": "WHAT FOODS CONTAIN VITAMIN C?"
+      },
+      {
+        "type": "group",
+        "id": "Group"
+      },
+      {
+        "type": "vector",
+        "id": "Vector"
+      }
+    ],
+    "modes": {
+      "Component 1": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "Rectangle 99",
+              "WHAT FOODS CONTAIN VITAMIN C?",
+              "Group"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Rectangle 99",
+            "border-radius": "33.0",
+            "drop-shadow": {
+              "color": {
+                "alpha": "0.2196078431372549",
+                "hue": "12.666666666666668",
+                "saturation": "0.7346938775510204",
+                "value": "0.9607843137254902"
+              },
+              "blur": "4.0",
+              "offset-x": "0.0",
+              "offset-y": "4.0",
+              "spread": "0.0",
+              "blend-mode": "normal"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "rectangle_99.svg"
+          },
+          {
+            "id": "WHAT FOODS CONTAIN VITAMIN C?",
+            "margin": {
+              "left": "22.0",
+              "top": "11.0",
+              "right": "137.0",
+              "bottom": "16.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "WHAT FOODS CONTAIN VITAMIN C?",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "line-height": "1.171875",
+            "typeface": "Roboto Condensed"
+          },
+          {
+            "id": "Group",
+            "margin": {
+              "left": "343.0",
+              "top": "14.0",
+              "right": "20.0",
+              "bottom": "14.0"
+            },
+            "relative-transform": [
+              [
+                "1.0",
+                "4.388510456076787e-17",
+                "0.0"
+              ],
+              [
+                "-4.388510456076787e-17",
+                "1.0",
+                "0.0"
+              ]
+            ],
+            "is-structured": "false",
+            "children": [
+              "Vector"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Vector",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector.svg"
+          }
+        ]
+      }
+    }
+  },
+  "previews": [
+    {
+      "design": "Component 1",
+      "size": {
+        "width": 368.0,
+        "height": 38.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
