@@ -138,18 +138,18 @@ class BarcodeScanningActivity : AppCompatActivity() {
 
     override fun onDestroy() {
 
-        var vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminDB")
+        val vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminDB")
             .createFromAsset("databases/Vitamins.db")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
 
-        val vitaminsDao = vitaminDB.VitaminsDao().getAll()
+        val dbValue = vitaminDB.VitaminsDao().findItemFromCode(scannedValue)
 
         super.onDestroy()
         cameraSource.stop()
         val database = Intent(this, DatabaseActivity::class.java).apply {
-            putExtra("vitaminID",vitaminsDao[0].IndexID)
+            putExtra("vitaminID", dbValue)
         }
         startActivity(database)
     }
