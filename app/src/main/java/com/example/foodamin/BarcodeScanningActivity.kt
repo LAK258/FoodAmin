@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.room.Room
 import com.example.foodamin.databinding.ActivityBarcodeScanningBinding
 import java.io.IOException
 import com.google.android.gms.vision.CameraSource
@@ -137,10 +138,19 @@ class BarcodeScanningActivity : AppCompatActivity() {
 
     override fun onDestroy() {
 
+        var vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminDB")
+            .createFromAsset("databases/Vitamins.db")
+            .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .build()
+
+        val vitaminsDao = vitaminDB.VitaminsDao().getAll()
+
         super.onDestroy()
         cameraSource.stop()
-        val database = Intent(this, DatabaseActivity::class.java)
-        intent.putExtra("Test",scannedValue)
+        val database = Intent(this, DatabaseActivity::class.java).apply {
+            putExtra("vitaminID",vitaminsDao[0].IndexID)
+        }
         startActivity(database)
     }
 }

@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root) // set which layout file to view
 
 
-
         binding.btn.setOnClickListener{
             val barcodeScanning = Intent(this, BarcodeScanningActivity::class.java)
             startActivity(barcodeScanning)

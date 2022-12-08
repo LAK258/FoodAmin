@@ -33,12 +33,13 @@ class DatabaseActivity : AppCompatActivity() {
         val foodDao = foodDB.foodDao().getAll()
         val vitaminsDao = vitaminDB.VitaminsDao().getAll()
 
-//        val test = intent.getStringArrayExtra("Test",)
+        var vitaminID = intent.getIntExtra("vitaminID", 0)
+
 
 
         binding.button.setOnClickListener {
 
- //           Toast.makeText(this,"$test", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"$vitaminID", Toast.LENGTH_LONG).show()
         }
 
 

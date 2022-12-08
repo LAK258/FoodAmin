@@ -10,6 +10,8 @@ interface VitaminsDao {
     @Query("SELECT * FROM Vitamins")
     fun getAll(): List<Vitamins>
 
+
+
     @Insert
     fun insertAll(vararg vitamins: Vitamins)
 
