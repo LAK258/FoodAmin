@@ -17,32 +17,21 @@ class DatabaseActivity : AppCompatActivity() {
         binding = ActivityDatabaseBinding.inflate(layoutInflater) // connects the binding variable to the layout file
         setContentView(binding.root) // set which layout file to view
 
-        var foodDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"FoodDB")
-            .createFromAsset("databases/Food.db")
+        val foodDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"foodFinalDB")
+            .createFromAsset("databases/Food1.db")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
 
-        var vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminDB")
+        val vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminFinalDB")
             .createFromAsset("databases/Vitamins.db")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
 
-
-        val foodDao = foodDB.foodDao().getAll()
-        val vitaminsDao = vitaminDB.VitaminsDao().getAll()
-
-        var vitaminID = intent.getIntExtra("vitaminID", 0)
-
-
-
-        binding.button.setOnClickListener {
-
-            Toast.makeText(this,"$vitaminID", Toast.LENGTH_LONG).show()
-        }
-
-
+        val vitaminID = intent.getIntExtra("vitaminID", 0)  // finds the vitamin id
+        val vitaminProduct = vitaminDB.VitaminsDao().findItemVitamin(vitaminID) // finds the specific vitamin bottle
+        val foodsWithVitamins = foodDB.foodDao().findItemVitamin(vitaminProduct[0].ParameterID) // finds all items containing the vitamin bottles' vitamin and sorts them in descending order in a list
 
     }
 }

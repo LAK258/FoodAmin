@@ -10,8 +10,9 @@ interface FoodDao {
     @Query("SELECT * FROM Food")
     fun getAll(): List<Food>
 
-//    @Query("SELECT * FROM Food WHERE FoodID = 1")
-//    fun getF(): List<Food>
+    @Query("SELECT * FROM Food WHERE ParameterID = :vitaminID AND ResVal > 0 ORDER BY ResVal DESC")
+    fun findItemVitamin(vitaminID: Int): List<Food>
+
 
     @Insert
     fun insertAll(vararg foods: Food)

@@ -10,8 +10,11 @@ interface VitaminsDao {
     @Query("SELECT * FROM Vitamins")
     fun getAll(): List<Vitamins>
 
-    @Query("SELECT IndexID FROM Vitamins WHERE Barcode = :scannedValue")
+    @Query("SELECT ParameterID FROM Vitamins WHERE Barcode = :scannedValue")
     fun findItemFromCode(scannedValue: String): Int
+
+    @Query("SELECT * FROM Vitamins WHERE ParameterID = :vitaminID")
+    fun findItemVitamin(vitaminID: Int): List<Vitamins>
 
     @Insert
     fun insertAll(vararg vitamins: Vitamins)

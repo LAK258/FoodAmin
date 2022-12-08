@@ -3,6 +3,7 @@ package com.example.foodamin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.room.Room
 import com.example.foodamin.databinding.ActivityMainBinding
 
@@ -16,14 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root) // set which layout file to view
 
 
+
         binding.btn.setOnClickListener{
             val barcodeScanning = Intent(this, BarcodeScanningActivity::class.java)
             startActivity(barcodeScanning)
-        }
-
-        binding.find.setOnClickListener{
-
-
         }
     }
 }

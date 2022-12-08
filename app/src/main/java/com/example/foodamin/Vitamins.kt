@@ -24,4 +24,6 @@ data class Vitamins (
 
     var Contains: Int,
 
+    var ParameterID: Int,
+
     )

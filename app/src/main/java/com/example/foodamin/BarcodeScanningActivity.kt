@@ -138,7 +138,7 @@ class BarcodeScanningActivity : AppCompatActivity() {
 
     override fun onDestroy() {
 
-        val vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminDB")
+        val vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminFinalDB")
             .createFromAsset("databases/Vitamins.db")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
