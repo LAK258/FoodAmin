@@ -278,4 +278,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/afterscanbuttoncompare" />
 
+    <TextView
+        android:id="@+id/whatIsRiDescription"
+        android:layout_width="348dp"
+        android:layout_height="62dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/RiDescriptionAfterScan"
+        app:layout_constraintEnd_toEndOf="@+id/RiDescriptionAfterScan"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/RiDescriptionAfterScan"
+        app:layout_constraintTop_toTopOf="@+id/RiDescriptionAfterScan"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <TextView
+        android:id="@+id/whatIsRi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/whatIsRi"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/whatIsRiDescription"
+        app:layout_constraintStart_toStartOf="@+id/whatIsRiDescription"
+        app:layout_constraintTop_toTopOf="@+id/RiDescriptionAfterScan"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/whatIsUpperLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/WhatIsUpperLimit"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/whatIsUpperLimitDescription"
+        app:layout_constraintStart_toStartOf="@+id/whatIsUpperLimitDescription"
+        app:layout_constraintTop_toTopOf="@+id/UpperLimitDiscriptionAfterScan"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/whatIsUpperLimitDescription"
+        android:layout_width="350dp"
+        android:layout_height="72dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/UpperLimitDiscriptionAfterScan"
+        app:layout_constraintEnd_toEndOf="@+id/UpperLimitDiscriptionAfterScan"
+        app:layout_constraintStart_toStartOf="@+id/UpperLimitDiscriptionAfterScan"
+        app:layout_constraintTop_toTopOf="@+id/UpperLimitDiscriptionAfterScan"
+        app:layout_constraintVertical_bias="0.813" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

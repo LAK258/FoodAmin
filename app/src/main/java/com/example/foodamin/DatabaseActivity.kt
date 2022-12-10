@@ -18,12 +18,7 @@ class DatabaseActivity : AppCompatActivity() {
         binding = ActivityDatabaseBinding.inflate(layoutInflater) // connects the binding variable to the layout file
         setContentView(binding.root) // set which layout file to view
 
-
-        val foodDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"foodFinalDB")
-            .createFromAsset("databases/Food1.db")
-            .allowMainThreadQueries()
-            .fallbackToDestructiveMigration()
-            .build()
+        // databases are made in all classes only due to time restrictions
 
         val vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminFinalDB")
             .createFromAsset("databases/Vitamins.db")
@@ -33,11 +28,12 @@ class DatabaseActivity : AppCompatActivity() {
 
         val vitaminID = intent.getIntExtra("vitaminID", 0)  // finds the vitamin id
         val vitaminProduct = vitaminDB.VitaminsDao().findItemVitamin(vitaminID) // finds the specific vitamin bottle
-        val foodsWithVitamins = foodDB.foodDao().findItemVitamin(vitaminProduct[0].ParameterID) // finds all items containing the vitamin bottles' vitamin and sorts them in descending order in a list. this will not be used in the test version
 
         //setup Layout text
         binding.vitaminNameAfterScan.text = vitaminProduct[0].Vitamin
         binding.vitaminBrandAfterScan.text = vitaminProduct[0].VitaminProduct
+
+
 
         val tableDescription = "Amount of ${vitaminProduct[0].Vitamin} in 1 pill"
         binding.amountOfVitaminAfterScan.text = tableDescription
@@ -48,9 +44,22 @@ class DatabaseActivity : AppCompatActivity() {
         val percentageCalc = "${vitaminProduct[0].Contains/ vitaminProduct[0].RI!!*100}%RI" // set in function textCreator
         binding.pillRiAfterScan.text = percentageCalc
 
+        // button interactions
+        binding.scanAfterScanBtn.setOnClickListener {
+            val scanActivity = Intent(this, BarcodeScanningActivity::class.java)
+            startActivity(scanActivity)
+        }
         binding.compareWithfoodAfterScanBtn.setOnClickListener{
-            val compareActivity = Intent(this, ComparisonActivity::class.java)
+            val compareActivity = Intent(this, ComparisonActivity::class.java).apply {
+                putExtra("vitaminID", vitaminID)
+            }
             startActivity(compareActivity)
+        }
+        binding.foodContainingAfterScanBtn.setOnClickListener {
+            val foodsWithVitamins = Intent(this, FoodWithVitaminsActvity::class.java).apply {
+                putExtra("vitaminID", vitaminID)
+            }
+            startActivity(foodsWithVitamins)
         }
     }
 }

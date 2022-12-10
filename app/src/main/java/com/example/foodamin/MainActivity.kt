@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.find.setOnClickListener { //if no bottle available
             val database = Intent(this, DatabaseActivity::class.java).apply {
-                putExtra("vitaminID", 126)
+                putExtra("vitaminID", 38)
             }
             startActivity(database)
         }

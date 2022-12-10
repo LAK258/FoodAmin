@@ -10,4 +10,6 @@
     <string name="fullRI">100 %RI</string>
     <string name="MissingImplULRI">-- %RI</string>
     <string name="MissingImplULUnit">-- %mg</string>
+    <string name="whatIsRi">What is %RI?</string>
+    <string name="WhatIsUpperLimit">What is UL?</string>
 </resources>

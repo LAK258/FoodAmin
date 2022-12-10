@@ -52,8 +52,8 @@
         android:id="@+id/backBtnComparison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backarrow" />
@@ -120,6 +120,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/compareText"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/pillPicComparison"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -162,6 +163,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/scanComparisonBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
@@ -174,6 +176,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/onePill"
+        android:textColor="#0E0707"
         app:layout_constraintBottom_toTopOf="@+id/pillRiPercentageComparison"
         app:layout_constraintEnd_toEndOf="@+id/pillTableComparison"
         app:layout_constraintHorizontal_bias="0.539"
@@ -187,6 +190,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:text=""
+        android:textColor="#0E0707"
         app:layout_constraintBottom_toTopOf="@+id/pillGramsComparison"
         app:layout_constraintEnd_toEndOf="@+id/pillTableComparison"
         app:layout_constraintHorizontal_bias="0.318"
@@ -196,11 +200,12 @@
         android:id="@+id/pillGramsComparison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:text=""
+        android:textColor="#0E0707"
         app:layout_constraintBottom_toBottomOf="@+id/pillTableComparison"
         app:layout_constraintEnd_toEndOf="@+id/pillTableComparison"
-        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="@+id/pillTableComparison" />
 
     <TextView
@@ -209,6 +214,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/oneFood"
+        android:textColor="#0E0707"
         app:layout_constraintBottom_toTopOf="@+id/foodRiComparison"
         app:layout_constraintEnd_toEndOf="@+id/foodTableComparison"
         app:layout_constraintHorizontal_bias="0.513"
@@ -222,6 +228,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text=""
+        android:textColor="#0E0707"
         app:layout_constraintBottom_toTopOf="@+id/foodGramsComparison"
         app:layout_constraintEnd_toEndOf="@+id/foodTableComparison"
         app:layout_constraintHorizontal_bias="0.309"
@@ -232,9 +239,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:textColor="#0E0707"
         app:layout_constraintBottom_toBottomOf="@+id/foodTableComparison"
         app:layout_constraintEnd_toEndOf="@+id/foodTableComparison"
-        app:layout_constraintHorizontal_bias="0.309"
-        app:layout_constraintStart_toStartOf="@+id/foodTableComparison" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/foodRiComparison" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="41dp"
+        android:layout_height="88dp"
+        app:layout_constraintEnd_toEndOf="@+id/pillPicComparison"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/pillPicComparison"
+        app:layout_constraintTop_toTopOf="@+id/pillPicComparison"
+        app:srcCompat="@drawable/afterscanvitaminimage" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/foodPicComparison"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/foodPicComparison"
+        app:layout_constraintTop_toTopOf="@+id/foodPicComparison"
+        app:srcCompat="@drawable/foodsribellpepper" />
+
+    <TextView
+        android:id="@+id/foodNameComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/foodPicComparison"
+        app:layout_constraintEnd_toEndOf="@+id/foodPicComparison"
+        app:layout_constraintStart_toEndOf="@+id/vsComparison"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/vitaminNameComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/pillPicComparison"
+        app:layout_constraintEnd_toStartOf="@+id/vsComparison"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.423" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
