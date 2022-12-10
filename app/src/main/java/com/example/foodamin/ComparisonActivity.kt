@@ -36,10 +36,9 @@ class ComparisonActivity : AppCompatActivity() {
 
         //layout
             //
-        val foodComparisonName = "1 ${bellPepper[0].FoodName}"
-        binding.foodNameComparison.text = foodComparisonName
-
         binding.foodNameComparison.text = bellPepper[0].FoodName
+
+        binding.oneFoodComparison.text = "1 piece"
 
         val foodAmountGramsString = "${bellPepper[0].ResVal?.toInt()} ${vitaminProduct[0].Unit}" // set in function textCreator
         binding.foodGramsComparison.text = foodAmountGramsString
