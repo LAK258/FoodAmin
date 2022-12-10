@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">FoodAmin</string>
+    <string name="RI_Toggle">Get 100%RI of Vit C</string>
+    <string name="FoodWithToggle">Food With Vit C</string>
+    <string name="compareText">Compare vitamins with food</string>
+    <string name="onePill">1 Pill</string>
+    <string name="oneFood">1</string>
+    <string name="referenceIntake">Reference Intake (%RI)</string>
+    <string name="upperLimit">Upper Limit (UL)</string>
+    <string name="fullRI">100 %RI</string>
+    <string name="MissingImplULRI">-- %RI</string>
+    <string name="MissingImplULUnit">-- %mg</string>
 </resources>

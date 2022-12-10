@@ -4,155 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DatabaseActivity">
+    tools:context=".DatabaseActivity"
+    android:background="@color/white">
+
 
     <ImageView
-        android:id="@+id/imageView30"
+        android:id="@+id/backBtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backarrow"
-        tools:layout_editor_absoluteX="51dp" />
+        app:srcCompat="@drawable/backarrow" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/appNameAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="41dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:text="@string/app_name"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ImageView
+        android:id="@+id/foodContainingAfterScanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/RiDescriptionAfterScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/afterscanbuttonfoods" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/compareTableAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/foodContainingAfterScanBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/afterscanbox1"
-        tools:layout_editor_absoluteY="528dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/afterscanbox2"
-        tools:layout_editor_absoluteY="658dp" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/afterscan_table"
-        tools:layout_editor_absoluteY="306dp" />
+        app:srcCompat="@drawable/afterscan_table" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/vitaminBrandAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="276dp" />
+        android:layout_marginBottom="12dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/compareWithfoodAfterScanBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toEndOf="@+id/pillBottleAfterScan" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/amountOfVitaminAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="409dp" />
+        android:layout_marginBottom="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/compareTableAfterScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="@+id/compareTableAfterScan" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/vitaminNameAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="309dp"
-        tools:layout_editor_absoluteY="404dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="368dp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="409dp" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="367dp" />
+        android:layout_marginBottom="4dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/vitaminBrandAfterScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toEndOf="@+id/pillBottleAfterScan" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/afterscanbuttoncompare"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="230dp" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="319dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="308dp"
-        tools:layout_editor_absoluteY="364dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="308dp"
-        tools:layout_editor_absoluteY="317dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="319dp" />
-
-    <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/menuAfterScanBtn"
         android:layout_width="415dp"
         android:layout_height="73dp"
         android:layout_marginBottom="-10dp"
@@ -163,7 +98,7 @@
         app:srcCompat="@drawable/homebarbackground" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/scanAfterScanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -173,7 +108,7 @@
         app:srcCompat="@drawable/scanbutton" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/searchAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
@@ -183,7 +118,7 @@
         app:srcCompat="@drawable/searchicon" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/profileAfterScanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -192,37 +127,155 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/usericon" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="187dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="158dp" />
-
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/RiDescriptionAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/afterscanwhatisri"
-        tools:layout_editor_absoluteY="540dp" />
+        app:srcCompat="@drawable/afterscanbox1" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/UpperLimitDiscriptionAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/afterscanwhatisul"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="668dp" />
+        android:layout_marginBottom="132dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/afterscanbox2" />
+
+    <TextView
+        android:id="@+id/onePillAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/onePill"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/referenceIntakeAfterScan"
+        app:layout_constraintStart_toStartOf="@+id/compareTableAfterScan"
+        app:layout_constraintTop_toTopOf="@+id/compareTableAfterScan"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <TextView
+        android:id="@+id/referenceIntakeAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/referenceIntake"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/upperLimitAfterScan"
+        app:layout_constraintStart_toStartOf="@+id/compareTableAfterScan" />
+
+    <TextView
+        android:id="@+id/upperLimitAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/upperLimit"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/compareTableAfterScan"
+        app:layout_constraintStart_toStartOf="@+id/compareTableAfterScan" />
+
+    <TextView
+        android:id="@+id/AmountFullUpperAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/MissingImplULUnit"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/compareTableAfterScan"
+        app:layout_constraintEnd_toEndOf="@+id/compareTableAfterScan"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/PercentageUpperLimitInPillAfterScan" />
+
+    <TextView
+        android:id="@+id/AmountFullRiAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/AmountFullUpperAfterScan"
+        app:layout_constraintEnd_toEndOf="@+id/compareTableAfterScan"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/percemtageRiInPillAfterScan" />
+
+    <TextView
+        android:id="@+id/AmountInPillAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/AmountFullRiAfterScan"
+        app:layout_constraintEnd_toEndOf="@+id/compareTableAfterScan"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pillRiAfterScan"
+        app:layout_constraintTop_toTopOf="@+id/compareTableAfterScan"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <TextView
+        android:id="@+id/pillRiAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/percemtageRiInPillAfterScan"
+        app:layout_constraintStart_toEndOf="@+id/onePillAfterScan"
+        app:layout_constraintTop_toTopOf="@+id/compareTableAfterScan"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <TextView
+        android:id="@+id/percemtageRiInPillAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/fullRI"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/PercentageUpperLimitInPillAfterScan"
+        app:layout_constraintStart_toEndOf="@+id/referenceIntakeAfterScan" />
+
+    <TextView
+        android:id="@+id/PercentageUpperLimitInPillAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/MissingImplULRI"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/compareTableAfterScan"
+        app:layout_constraintStart_toEndOf="@+id/upperLimitAfterScan" />
+
+    <ImageView
+        android:id="@+id/pillBottleAfterScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/amountOfVitaminAfterScan"
+        app:layout_constraintEnd_toStartOf="@+id/compareWithfoodAfterScanBtn"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902"
+        app:srcCompat="@drawable/afterscanvitaminimage" />
+
+    <ImageView
+        android:id="@+id/compareWithfoodAfterScanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/compareTableAfterScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/afterscanbuttoncompare" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

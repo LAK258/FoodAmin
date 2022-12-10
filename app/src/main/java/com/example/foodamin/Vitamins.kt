@@ -16,7 +16,7 @@ data class Vitamins (
 
     var Vitamin: String,
 
-    var Unit: Int,
+    var Unit: String,
 
     var RI: Int?,
 

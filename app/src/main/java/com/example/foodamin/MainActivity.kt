@@ -14,9 +14,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater) // connects the binding variable to the layout file
         setContentView(binding.root) // set which layout file to view
 
+        binding.find.setOnClickListener { //if no bottle available
+            val database = Intent(this, DatabaseActivity::class.java).apply {
+                putExtra("vitaminID", 126)
+            }
+            startActivity(database)
+        }
         binding.btn.setOnClickListener{
             val barcodeScanning = Intent(this, BarcodeScanningActivity::class.java)
             startActivity(barcodeScanning)
+
+
         }
     }
 }

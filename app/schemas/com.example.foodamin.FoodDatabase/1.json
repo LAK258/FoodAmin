@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "2bfabed6db3d5b2fc0a3c993ec82c121",
+    "identityHash": "d86e8ed9981ec11f3a04757c8b877848",
     "entities": [
       {
         "tableName": "Food",
@@ -68,7 +68,7 @@
       },
       {
         "tableName": "Vitamins",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`IndexID` INTEGER NOT NULL, `Barcode` INTEGER NOT NULL, `VitaminProduct` TEXT NOT NULL, `Vitamin` TEXT NOT NULL, `Unit` INTEGER NOT NULL, `RI` INTEGER, `SourceID` INTEGER NOT NULL, `Contains` INTEGER NOT NULL, `ParameterID` INTEGER NOT NULL, PRIMARY KEY(`IndexID`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`IndexID` INTEGER NOT NULL, `Barcode` INTEGER NOT NULL, `VitaminProduct` TEXT NOT NULL, `Vitamin` TEXT NOT NULL, `Unit` TEXT NOT NULL, `RI` INTEGER, `SourceID` INTEGER NOT NULL, `Contains` INTEGER NOT NULL, `ParameterID` INTEGER NOT NULL, PRIMARY KEY(`IndexID`))",
         "fields": [
           {
             "fieldPath": "IndexID",
@@ -97,7 +97,7 @@
           {
             "fieldPath": "Unit",
             "columnName": "Unit",
-            "affinity": "INTEGER",
+            "affinity": "TEXT",
             "notNull": true
           },
           {
@@ -138,7 +138,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2bfabed6db3d5b2fc0a3c993ec82c121')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd86e8ed9981ec11f3a04757c8b877848')"
     ]
   }
 }

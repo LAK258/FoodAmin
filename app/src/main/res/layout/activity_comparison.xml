@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ComparisonActivity">
+    tools:context=".ComparisonActivity"
+    android:background="@color/white">
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/menuComparison"
         android:layout_width="415dp"
         android:layout_height="73dp"
         android:layout_marginBottom="-10dp"
@@ -18,7 +19,7 @@
         app:srcCompat="@drawable/homebarbackground" />
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/scanComparisonBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -28,7 +29,7 @@
         app:srcCompat="@drawable/scanbutton" />
 
     <ImageView
-        android:id="@+id/imageView24"
+        android:id="@+id/searchComparisonBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
@@ -38,7 +39,7 @@
         app:srcCompat="@drawable/searchicon" />
 
     <ImageView
-        android:id="@+id/imageView25"
+        android:id="@+id/profileComparisonBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -48,99 +49,192 @@
         app:srcCompat="@drawable/usericon" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/backBtnComparison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189"
-        app:srcCompat="@drawable/comparebox"
-        tools:layout_editor_absoluteX="32dp" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backarrow"
-        tools:layout_editor_absoluteX="51dp" />
+        app:srcCompat="@drawable/backarrow" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/foodTableComparison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/foodWithVitaminComparisonBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/comparebox"
-        tools:layout_editor_absoluteY="148dp" />
+        app:srcCompat="@drawable/comparebox1pill" />
 
     <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/comparebox1pill"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="323dp" />
-
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/comparebox1pill"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="323dp" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/compareboxvitc"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="373dp" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/compareboxvitc"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="373dp" />
-
-    <ImageView
-        android:id="@+id/imageView20"
+        android:id="@+id/vsComparison"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/foodPicComparison"
+        app:layout_constraintEnd_toStartOf="@+id/foodPicComparison"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225"
+        app:layout_constraintStart_toEndOf="@+id/pillPicComparison"
+        app:layout_constraintTop_toTopOf="@+id/foodPicComparison"
+        app:layout_constraintVertical_bias="0.582"
         app:srcCompat="@drawable/comparevs" />
 
-    <TextView
-        android:id="@+id/textView15"
+    <ImageView
+        android:id="@+id/VitCDesignComparisonRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="125dp" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="41dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/foodTableComparison"
+        app:layout_constraintEnd_toEndOf="@+id/foodTableComparison"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/foodTableComparison"
+        app:layout_constraintTop_toTopOf="@+id/foodTableComparison"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/compareboxvitc" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/foodPicComparison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/group"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="480dp" />
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/foodTableComparison"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861"
+        app:srcCompat="@drawable/comparebox" />
+
+    <ImageView
+        android:id="@+id/pillTableComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/foodWithVitaminComparisonBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/comparebox1pill" />
+
+    <TextView
+        android:id="@+id/compareTextComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/compareText"
+        app:layout_constraintBottom_toTopOf="@+id/pillPicComparison"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/VitCDesignComparisonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/pillTableComparison"
+        app:layout_constraintEnd_toEndOf="@+id/pillTableComparison"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pillTableComparison"
+        app:layout_constraintTop_toTopOf="@+id/pillTableComparison"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/compareboxvitc" />
+
+    <ImageView
+        android:id="@+id/pillPicComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/pillTableComparison"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861"
+        app:srcCompat="@drawable/comparebox" />
+
+    <ImageView
+        android:id="@+id/foodWithVitaminComparisonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="308dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/group" />
+
+    <TextView
+        android:id="@+id/appNameCompare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/scanComparisonBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/onePillComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onePill"
+        app:layout_constraintBottom_toTopOf="@+id/pillRiPercentageComparison"
+        app:layout_constraintEnd_toEndOf="@+id/pillTableComparison"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="@+id/pillTableComparison"
+        app:layout_constraintTop_toTopOf="@+id/pillTableComparison"
+        app:layout_constraintVertical_bias="0.355" />
+
+    <TextView
+        android:id="@+id/pillRiPercentageComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/pillGramsComparison"
+        app:layout_constraintEnd_toEndOf="@+id/pillTableComparison"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="@+id/pillTableComparison" />
+
+    <TextView
+        android:id="@+id/pillGramsComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/pillTableComparison"
+        app:layout_constraintEnd_toEndOf="@+id/pillTableComparison"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="@+id/pillTableComparison" />
+
+    <TextView
+        android:id="@+id/oneFoodComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/oneFood"
+        app:layout_constraintBottom_toTopOf="@+id/foodRiComparison"
+        app:layout_constraintEnd_toEndOf="@+id/foodTableComparison"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/foodTableComparison"
+        app:layout_constraintTop_toTopOf="@+id/foodTableComparison"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/foodRiComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/foodGramsComparison"
+        app:layout_constraintEnd_toEndOf="@+id/foodTableComparison"
+        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintStart_toStartOf="@+id/foodTableComparison" />
+
+    <TextView
+        android:id="@+id/foodGramsComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/foodTableComparison"
+        app:layout_constraintEnd_toEndOf="@+id/foodTableComparison"
+        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintStart_toStartOf="@+id/foodTableComparison" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
