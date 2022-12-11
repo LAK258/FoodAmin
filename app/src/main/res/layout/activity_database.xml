@@ -35,11 +35,12 @@
         android:id="@+id/foodContainingAfterScanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toTopOf="@+id/RiDescriptionAfterScan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.982"
         app:srcCompat="@drawable/afterscanbuttonfoods" />
 
     <ImageView
@@ -89,22 +90,23 @@
     <ImageView
         android:id="@+id/menuAfterScanBtn"
         android:layout_width="415dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="-10dp"
+        android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/homebarbackground" />
 
     <ImageView
         android:id="@+id/scanAfterScanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
         app:srcCompat="@drawable/scanbutton" />
 
     <ImageView
@@ -131,7 +133,7 @@
         android:id="@+id/RiDescriptionAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.581"
@@ -142,10 +144,10 @@
         android:id="@+id/UpperLimitDiscriptionAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="108dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/afterscanbox2" />
 
@@ -281,14 +283,15 @@
     <TextView
         android:id="@+id/whatIsRiDescription"
         android:layout_width="348dp"
-        android:layout_height="62dp"
+        android:layout_height="69dp"
+        android:text="@string/whatIsRiText"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/RiDescriptionAfterScan"
         app:layout_constraintEnd_toEndOf="@+id/RiDescriptionAfterScan"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="@+id/RiDescriptionAfterScan"
         app:layout_constraintTop_toTopOf="@+id/RiDescriptionAfterScan"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.804" />
 
     <TextView
         android:id="@+id/whatIsRi"
@@ -312,13 +315,14 @@
         app:layout_constraintBottom_toTopOf="@+id/whatIsUpperLimitDescription"
         app:layout_constraintStart_toStartOf="@+id/whatIsUpperLimitDescription"
         app:layout_constraintTop_toTopOf="@+id/UpperLimitDiscriptionAfterScan"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/whatIsUpperLimitDescription"
         android:layout_width="350dp"
-        android:layout_height="72dp"
+        android:layout_height="89dp"
         android:textColor="#000000"
+        android:text="@string/WhatIsUpperLimitText"
         app:layout_constraintBottom_toBottomOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintEnd_toEndOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintStart_toStartOf="@+id/UpperLimitDiscriptionAfterScan"

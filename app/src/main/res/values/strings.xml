@@ -10,6 +10,8 @@
     <string name="fullRI">100 %RI</string>
     <string name="MissingImplULRI">-- %RI</string>
     <string name="MissingImplULUnit">-- %mg</string>
-    <string name="whatIsRi">What is %RI?</string>
-    <string name="WhatIsUpperLimit">What is UL?</string>
+    <string name="whatIsRi"><b>What is %RI?</b></string>
+    <string name="WhatIsUpperLimit"><b>What is UL?</b></string>
+    <string name="whatIsRiText">100%RI tells you the minimum amount of a vitamin that is required to avoid deficiency in the majority of the population. <b>Achieving 80 mg (100%RI) of Vitamin C, is comparable to eating half a small bell pepper.</b></string>
+    <string name="WhatIsUpperLimitText">The UL (<b>Tolerable Upper Intake Level</b>) for vitamin C is between 1.000 and 2.000 mg. Taking large amounts (more than 1,000mg per day) of vitamin C <b>can cause stomach pain and diarrhoea.</b> These symptoms should disappear once you stop taking vitamin C supplements.</string>
 </resources>
