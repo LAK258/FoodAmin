@@ -4,22 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".FoodWithVitaminsActvity">
 
+
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:id="@+id/BackBtnGrams"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/appNameGrams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backarrow"
-        tools:layout_editor_absoluteX="51dp" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/backarrow" />
 
     <TextView
         android:id="@+id/appNameGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/imageView26"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -39,217 +47,276 @@
         app:srcCompat="@drawable/homebarbackground" />
 
     <ImageView
-        android:id="@+id/scanGramsBtn"
+        android:id="@+id/scanBtnGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981"
         app:srcCompat="@drawable/scanbutton" />
 
     <ImageView
-        android:id="@+id/imageView28"
+        android:id="@+id/searchBtnGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/scanBtnGrams"
+        app:layout_constraintTop_toTopOf="@+id/imageView26"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/searchicon" />
 
     <ImageView
-        android:id="@+id/imageView29"
+        android:id="@+id/profileBtnGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scanBtnGrams"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView26"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/usericon" />
 
     <TextView
         android:id="@+id/VitaminNameGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="101dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/whatisVitaminGrams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameGrams" />
 
     <ImageView
         android:id="@+id/toggleBoxForRiInGrams"
-        android:layout_width="173dp"
-        android:layout_height="18dp"
-        app:srcCompat="@drawable/whitebox"
-        tools:layout_editor_absoluteX="203dp"
-        tools:layout_editor_absoluteY="342dp" />
+        android:layout_width="186dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/outerToggleGrams"
+        app:layout_constraintEnd_toEndOf="@+id/outerToggleGrams"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/outerToggleGrams"
+        app:layout_constraintTop_toTopOf="@+id/outerToggleGrams"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/whitebox" />
 
     <ImageView
         android:id="@+id/outerToggleGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="492dp"
+        app:layout_constraintBottom_toTopOf="@+id/scanBtnGrams"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/toggleouter"
-        tools:layout_editor_absoluteY="338dp" />
+        app:srcCompat="@drawable/toggleouter" />
 
     <ImageView
         android:id="@+id/toggleBoxForGramsinGrams"
         android:layout_width="186dp"
         android:layout_height="28dp"
-        app:srcCompat="@drawable/bluebox"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="338dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/outerToggleGrams"
+        app:layout_constraintEnd_toEndOf="@+id/outerToggleGrams"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="@+id/outerToggleGrams"
+        app:layout_constraintTop_toTopOf="@+id/outerToggleGrams"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bluebox" />
 
-    <ImageView
-        android:id="@+id/WhatIsCvitaminGrams"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/firstFoodShadow"
+        android:layout_width="164dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView48"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/foodswhatiscvitamin"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-    <ImageView
-        android:id="@+id/imageView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/foodscbox"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="389dp" />
 
-    <ImageView
-        android:id="@+id/imageView47"
+        <TextView
+            android:id="@+id/firstFoodNameGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="20dp"
+            android:text=""
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/firstFoodTextGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/firstFoodPicGrams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/foodscbellpepper" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/secondFoodShadow"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_height="179dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView49"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/foodscbox"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-    <ImageView
+
+        <TextView
+            android:id="@+id/secondFoodNameGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textColor="#000000"
+
+            />
+
+        <TextView
+            android:id="@+id/secondFoodTextGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="20dp"
+            android:text=""
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/secondFoodPicGrams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/foodscmashedpotatoes" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/imageView48"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/foodscbox"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="592dp" />
+        android:layout_height="175dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/scanBtnGrams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-    <ImageView
+
+        <ImageView
+            android:id="@+id/thirdFoodPicGrams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/foodscpopcorn" />
+
+        <TextView
+            android:id="@+id/thirdFoodNameGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/thirdFoodTextGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="20dp"
+            android:text=""
+            android:textColor="#000000" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/imageView49"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/foodscbox"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="592dp" />
-
-    <ImageView
-        android:id="@+id/imageView50"
-        android:layout_width="175dp"
-        android:layout_height="117dp"
-        app:srcCompat="@drawable/foodscbellpepper"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="389dp" />
-
-    <ImageView
-        android:id="@+id/imageView51"
-        android:layout_width="171dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="-7dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="179dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/scanBtnGrams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.493"
-        app:srcCompat="@drawable/foodscmashedpotatoes"
-        tools:layout_editor_absoluteX="216dp" />
+        app:layout_constraintVertical_bias="0.891">
 
-    <ImageView
-        android:id="@+id/imageView52"
-        android:layout_width="175dp"
-        android:layout_height="119dp"
-        app:srcCompat="@drawable/foodscpopcorn"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="592dp" />
 
-    <ImageView
-        android:id="@+id/imageView53"
-        android:layout_width="172dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="-4dp"
-        app:layout_constraintTop_toTopOf="@+id/imageView49"
-        app:srcCompat="@drawable/foodsckoriander"
-        tools:layout_editor_absoluteX="214dp" />
+        <ImageView
+            android:id="@+id/fourthFoodPicGrams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/foodsckoriander" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="512dp" />
+        <TextView
+            android:id="@+id/fourthFoodNameGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textColor="#000000" />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="539dp" />
+        <TextView
+            android:id="@+id/fourthFoodTextGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="20dp"
+            android:text=""
+            android:textColor="#000000" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="512dp" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="532dp" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="718dp" />
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="740dp" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="720dp" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="739dp" />
-
-    <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/GramsToggleTextGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/FoodWithToggle"
         android:textColor="#FBFCFD"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/toggleBoxForGramsinGrams"
+        app:layout_constraintEnd_toEndOf="@+id/toggleBoxForGramsinGrams"
+        app:layout_constraintStart_toStartOf="@+id/outerToggleGrams"
+        app:layout_constraintTop_toTopOf="@+id/toggleBoxForGramsinGrams" />
 
     <TextView
         android:id="@+id/RiToggleTextInGrams"
@@ -257,7 +324,23 @@
         android:layout_height="wrap_content"
         android:text="@string/RI_Toggle"
         android:textColor="#2147B1"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/toggleBoxForRiInGrams"
+        app:layout_constraintEnd_toEndOf="@+id/toggleBoxForRiInGrams"
+        app:layout_constraintStart_toEndOf="@+id/toggleBoxForGramsinGrams"
+        app:layout_constraintTop_toTopOf="@+id/toggleBoxForRiInGrams" />
+
+    <TextView
+        android:id="@+id/whatisVitaminGrams"
+        android:layout_width="324dp"
+        android:layout_height="74dp"
+        android:shadowColor="#000000"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/outerToggleGrams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.787" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

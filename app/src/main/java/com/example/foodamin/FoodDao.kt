@@ -13,7 +13,7 @@ interface FoodDao {
     @Query("SELECT * FROM Food WHERE ParameterID = :vitaminID AND ResVal > 0 ORDER BY ResVal DESC")
     fun findItemVitamin(vitaminID: Int): List<Food>
 
-    @Query("SELECT * FROM Food where FoodName = :nameOfFood")
+    @Query("SELECT * FROM Food where FoodName = :nameOfFood AND ParameterID = 47")
     fun usabilityTestQuery(nameOfFood: String): List<Food>
 
     @Insert
