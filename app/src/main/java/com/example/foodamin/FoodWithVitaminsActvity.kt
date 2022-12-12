@@ -31,10 +31,13 @@ class FoodWithVitaminsActvity : AppCompatActivity() {
             .build()
 
         val vitaminID = intent.getIntExtra("vitaminID", 0)  // finds the vitamin id
+        val previousPageId = intent.getIntExtra("originalPage",0)
         val vitaminProduct = vitaminDB.VitaminsDao().findItemVitamin(vitaminID) // finds the specific vitamin bottle
         //val foodsWithVitamins = foodDB.foodDao().findItemVitamin(vitaminProduct[0].ParameterID) // finds all items containing the vitamin bottles' vitamin and sorts them in descending order in a list. this will not be used in the test version
 
         // layout
+        supportActionBar?.hide()
+        binding.VitaminNameGrams.text = vitaminProduct[0].Vitamin
 
         //bellPepper
         val bellPepper = foodDB.foodDao().usabilityTestQuery("Pepper, sweet, red, raw")
@@ -79,8 +82,35 @@ class FoodWithVitaminsActvity : AppCompatActivity() {
         binding.toggleBoxForRiInGrams.setOnClickListener {
             val foodsWithVitamins = Intent(this, FoodWithVitaminsRIActivity::class.java).apply {
                 putExtra("vitaminID",vitaminID)
+                putExtra("originalPage",previousPageId)
             }
             startActivity(foodsWithVitamins)
+            overridePendingTransition(0,0)
+
+        }
+        binding.BackBtnGrams.setOnClickListener {
+            val goToDatabaseActivity = Intent(this,DatabaseActivity::class.java).apply {
+                putExtra("vitaminID",vitaminID)
+            }
+            val goToComparisonActivity = Intent(this,ComparisonActivity::class.java).apply {
+                putExtra("vitaminID",vitaminID)
+            }
+            val goToBarCodeScanner= Intent (this,BarcodeScanningActivity::class.java).apply {
+                putExtra("vitaminID",vitaminID)
+            }
+            when(previousPageId) {
+                1 -> {
+                    startActivity(goToDatabaseActivity)
+                }
+                2 -> {
+                    startActivity(goToComparisonActivity)
+                }
+                else -> {
+                    startActivity(goToBarCodeScanner)
+                    overridePendingTransition(0, 0)
+                }
+            }
         }
     }
 }
+

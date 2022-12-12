@@ -11,10 +11,8 @@
         android:id="@+id/backBtnRi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
         app:srcCompat="@drawable/backarrow" />
 
     <TextView
@@ -23,34 +21,23 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <ImageView
         android:id="@+id/imageView32"
-        android:layout_width="415dp"
+        android:layout_width="wrap_content"
         android:layout_height="73dp"
         android:layout_marginBottom="-10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/homebarbackground" />
-
-    <ImageView
-        android:id="@+id/scanBtnRi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/scanbutton" />
 
     <ImageView
         android:id="@+id/searchBtnRi"
@@ -88,10 +75,10 @@
         android:id="@+id/imageView37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/firstFoodPicRi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
         app:srcCompat="@drawable/toggleouter" />
 
     <ImageView
@@ -104,43 +91,11 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bluebox" />
 
-    <ImageView
-        android:id="@+id/firstFoodPicRi"
-        android:layout_width="118dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/secondFoodPicRi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/foodsribellpepper" />
-
-    <ImageView
-        android:id="@+id/secondFoodPicRi"
-        android:layout_width="139dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="-7dp"
-        app:layout_constraintBottom_toTopOf="@+id/thirdFoodPicRi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
-        app:srcCompat="@drawable/foodsrimashedpotatoes" />
-
-    <ImageView
-        android:id="@+id/thirdFoodPicRi"
-        android:layout_width="141dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/fourthFoodPicRi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/foodsripopcorn" />
-
     <TextView
         android:id="@+id/firstFoodTextRi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="16dp"
         android:text=""
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/firstFoodPicRi"
@@ -163,23 +118,21 @@
         android:id="@+id/secondFoodNameRi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:layout_marginBottom="8dp"
         android:text=""
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/secondFoodTextRi"
-        app:layout_constraintStart_toEndOf="@+id/secondFoodPicRi" />
+        app:layout_constraintStart_toStartOf="@+id/firstFoodNameRi" />
 
     <TextView
         android:id="@+id/secondFoodTextRi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:layout_marginBottom="8dp"
         android:text=""
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/secondFoodPicRi"
-        app:layout_constraintStart_toEndOf="@+id/secondFoodPicRi" />
+        app:layout_constraintStart_toStartOf="@+id/firstFoodTextRi" />
 
     <TextView
         android:id="@+id/thirdFoodTextRi"
@@ -206,22 +159,20 @@
         android:id="@+id/fourthFoodNameRi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:text=""
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/fourthFoodTextRi"
-        app:layout_constraintStart_toEndOf="@+id/fourthFoodPicRi" />
+        app:layout_constraintStart_toStartOf="@+id/thirdFoodTextRi" />
 
     <TextView
         android:id="@+id/fourthFoodTextRi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:text=""
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/fourthFoodPicRi"
-        app:layout_constraintStart_toEndOf="@+id/fourthFoodPicRi" />
+        app:layout_constraintStart_toStartOf="@+id/thirdFoodTextRi" />
 
     <TextView
         android:id="@+id/riTextRi"
@@ -247,50 +198,171 @@
 
     <ImageView
         android:id="@+id/fourthFoodPicRi"
-        android:layout_width="115dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView32"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline14"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
         app:srcCompat="@drawable/foodsrikoriander" />
+
+    <ImageView
+        android:id="@+id/thirdFoodPicRi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fourthFoodPicRi"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:srcCompat="@drawable/foodsripopcorn" />
+
+    <ImageView
+        android:id="@+id/firstFoodPicRi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/secondFoodPicRi"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="0.708"
+        app:srcCompat="@drawable/foodsribellpepper" />
+
+    <ImageView
+        android:id="@+id/scanBtnRi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
+        app:layout_constraintTop_toTopOf="@+id/guideline14"
+        app:layout_constraintVertical_bias="0.98"
+        app:srcCompat="@drawable/scanbutton" />
+
+    <ImageView
+        android:id="@+id/secondFoodPicRi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/thirdFoodPicRi"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981"
+        app:srcCompat="@drawable/foodsrimashedpotatoes" />
 
     <TextView
         android:id="@+id/whatIsVitaminRi"
-        android:layout_width="344dp"
-        android:layout_height="127dp"
-        android:layout_marginBottom="20dp"
-        android:textColor="#000000"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
         android:text="@string/WhatIsCVitaminText"
-        app:layout_constraintBottom_toTopOf="@+id/imageView37"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appNameRI"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline24" />
 
     <TextView
         android:id="@+id/vitaminNameRi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/whatIsVitaminRi"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appNameRI"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
         android:text="@string/WhatIsCVitamin"
-        app:layout_constraintBottom_toTopOf="@+id/whatIsVitaminRi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appNameRI"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/whatIsVitaminRi"
+        app:layout_constraintTop_toTopOf="@+id/guideline17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.39" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90794015" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.023014959" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.048661802" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96107054" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9689298" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06674338" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15189873" />
 </androidx.constraintlayout.widget.ConstraintLayout>

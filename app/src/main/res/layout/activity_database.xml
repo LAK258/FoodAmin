@@ -4,19 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DatabaseActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".DatabaseActivity">
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.023014959" />
 
     <ImageView
         android:id="@+id/backBtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline32"
+        app:layout_constraintTop_toTopOf="@+id/guideline38"
         app:srcCompat="@drawable/backarrow" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96107054" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90794015" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9689298" />
 
     <TextView
         android:id="@+id/appNameAfterScan"
@@ -24,34 +71,30 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintTop_toTopOf="@+id/guideline38" />
 
     <ImageView
         android:id="@+id/foodContainingAfterScanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/RiDescriptionAfterScan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982"
+        app:layout_constraintBottom_toTopOf="@+id/guideline42"
+        app:layout_constraintEnd_toStartOf="@+id/guideline31"
+        app:layout_constraintStart_toStartOf="@+id/guideline32"
+        app:layout_constraintTop_toTopOf="@+id/guideline40"
         app:srcCompat="@drawable/afterscanbuttonfoods" />
 
     <ImageView
         android:id="@+id/compareTableAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/foodContainingAfterScanBtn"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline40"
+        app:layout_constraintEnd_toStartOf="@+id/guideline31"
         app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline32"
+        app:layout_constraintTop_toTopOf="@+id/guideline39"
         app:srcCompat="@drawable/afterscan_table" />
 
     <TextView
@@ -69,12 +112,12 @@
         android:id="@+id/amountOfVitaminAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/compareTableAfterScan"
+        app:layout_constraintBottom_toTopOf="@+id/guideline39"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="@+id/compareTableAfterScan" />
+        app:layout_constraintStart_toStartOf="@+id/compareTableAfterScan"
+        app:layout_constraintTop_toTopOf="@+id/guideline41" />
 
     <TextView
         android:id="@+id/vitaminNameAfterScan"
@@ -89,23 +132,22 @@
 
     <ImageView
         android:id="@+id/menuAfterScanBtn"
-        android:layout_width="415dp"
-        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginBottom="-10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/homebarbackground" />
 
     <ImageView
         android:id="@+id/scanAfterScanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline34"
+        app:layout_constraintEnd_toStartOf="@+id/guideline30"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline33"
         app:layout_constraintVertical_bias="0.968"
         app:srcCompat="@drawable/scanbutton" />
 
@@ -133,22 +175,21 @@
         android:id="@+id/RiDescriptionAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/UpperLimitDiscriptionAfterScan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline31"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/guideline32"
+        app:layout_constraintTop_toTopOf="@+id/guideline42"
         app:srcCompat="@drawable/afterscanbox1" />
 
     <ImageView
         android:id="@+id/UpperLimitDiscriptionAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline43"
+        app:layout_constraintEnd_toStartOf="@+id/guideline31"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/guideline32"
         app:srcCompat="@drawable/afterscanbox2" />
 
     <TextView
@@ -261,11 +302,11 @@
         android:id="@+id/pillBottleAfterScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/amountOfVitaminAfterScan"
-        app:layout_constraintEnd_toStartOf="@+id/compareWithfoodAfterScanBtn"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toStartOf="@+id/guideline44"
         app:layout_constraintHorizontal_bias="0.796"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline37"
+        app:layout_constraintTop_toTopOf="@+id/guideline35"
         app:layout_constraintVertical_bias="0.902"
         app:srcCompat="@drawable/afterscanvitaminimage" />
 
@@ -273,11 +314,9 @@
         android:id="@+id/compareWithfoodAfterScanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/compareTableAfterScan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintStart_toStartOf="@+id/guideline44"
         app:srcCompat="@drawable/afterscanbuttoncompare" />
 
     <TextView
@@ -321,12 +360,68 @@
         android:id="@+id/whatIsUpperLimitDescription"
         android:layout_width="350dp"
         android:layout_height="89dp"
-        android:textColor="#000000"
         android:text="@string/WhatIsUpperLimitText"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintEnd_toEndOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintStart_toStartOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintTop_toTopOf="@+id/UpperLimitDiscriptionAfterScan"
         app:layout_constraintVertical_bias="0.813" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07825086" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.11192214" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8883774" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32846716" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

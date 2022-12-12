@@ -10,16 +10,11 @@
 
     <ImageView
         android:id="@+id/BackBtnGrams"
-        android:layout_width="25dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/appNameGrams"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
         app:srcCompat="@drawable/backarrow" />
 
     <TextView
@@ -28,16 +23,14 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView26"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <ImageView
         android:id="@+id/imageView26"
-        android:layout_width="415dp"
+        android:layout_width="wrap_content"
         android:layout_height="73dp"
         android:layout_marginBottom="-10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,11 +43,10 @@
         android:id="@+id/scanBtnGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
+        app:layout_constraintTop_toTopOf="@+id/guideline14"
         app:layout_constraintVertical_bias="0.981"
         app:srcCompat="@drawable/scanbutton" />
 
@@ -91,10 +83,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/whatIsCVitaminGrams"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appNameGrams" />
+        app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
     <ImageView
         android:id="@+id/toggleBoxForRiInGrams"
@@ -112,10 +103,11 @@
         android:id="@+id/outerToggleGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="492dp"
-        app:layout_constraintBottom_toTopOf="@+id/scanBtnGrams"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
         app:srcCompat="@drawable/toggleouter" />
 
     <ImageView
@@ -133,16 +125,15 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/firstFoodShadow"
-        android:layout_width="164dp"
+        android:layout_width="wrap_content"
         android:layout_height="175dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="24dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="0.63">
 
 
         <TextView
@@ -179,14 +170,14 @@
         android:id="@+id/secondFoodShadow"
         android:layout_width="wrap_content"
         android:layout_height="179dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView49"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="0.69">
 
 
         <TextView
@@ -225,15 +216,13 @@
         android:id="@+id/imageView48"
         android:layout_width="wrap_content"
         android:layout_height="175dp"
-        android:layout_marginBottom="64dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/scanBtnGrams"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
 
 
         <ImageView
@@ -271,12 +260,12 @@
         android:layout_height="179dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/scanBtnGrams"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891">
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.54">
 
 
         <ImageView
@@ -331,28 +320,130 @@
 
     <TextView
         android:id="@+id/whatisVitaminGrams"
-        android:layout_width="354dp"
-        android:layout_height="101dp"
-        android:shadowColor="#000000"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
         android:text="@string/WhatIsCVitaminText"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/outerToggleGrams"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline24" />
 
     <TextView
         android:id="@+id/whatIsCVitaminGrams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:layout_marginBottom="4dp"
         android:text="@string/WhatIsCVitamin"
-        app:layout_constraintBottom_toTopOf="@+id/whatisVitaminGrams"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/whatisVitaminGrams"
+        app:layout_constraintTop_toTopOf="@+id/guideline17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.39" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90794015" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.023014959" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.048661802" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96107054" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9689298" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06674338" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15189873" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6444189" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.49878347" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8941312" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

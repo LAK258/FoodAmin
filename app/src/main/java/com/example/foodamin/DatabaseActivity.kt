@@ -19,6 +19,7 @@ class DatabaseActivity : AppCompatActivity() {
         setContentView(binding.root) // set which layout file to view
 
         // databases are made in all classes only due to time restrictions
+        supportActionBar?.hide()
 
         val vitaminDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"VitaminFinalDB")
             .createFromAsset("databases/Vitamins.db")
@@ -58,8 +59,14 @@ class DatabaseActivity : AppCompatActivity() {
         binding.foodContainingAfterScanBtn.setOnClickListener {
             val foodsWithVitamins = Intent(this, FoodWithVitaminsActvity::class.java).apply {
                 putExtra("vitaminID", vitaminID)
+                putExtra("originalPage", 1)
             }
             startActivity(foodsWithVitamins)
+        }
+
+        binding.backBtn2.setOnClickListener {
+            val previousPage = Intent (this, BarcodeScanningActivity::class.java)
+            startActivity(previousPage)
         }
     }
 }

@@ -16,6 +16,7 @@ class ComparisonActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // databases are made in all classes only due to time restrictions
+        supportActionBar?.hide()
 
         val foodDB = Room.databaseBuilder(applicationContext,FoodDatabase::class.java,"foodFinalDB")
             .createFromAsset("databases/Food1.db")
@@ -36,7 +37,7 @@ class ComparisonActivity : AppCompatActivity() {
 
         //layout
             //
-        binding.foodNameComparison.text = bellPepper[0].FoodName
+        binding.foodNameComparison.text = "Red pepper"
 
         binding.oneFoodComparison.text = "1 piece"
 
@@ -66,8 +67,15 @@ class ComparisonActivity : AppCompatActivity() {
         binding.foodWithVitaminComparisonBtn.setOnClickListener {
             val foodsWithVitamins = Intent(this, FoodWithVitaminsActvity::class.java).apply {
                 putExtra("vitaminID", vitaminID)
+                putExtra("originalPage", 2)
             }
             startActivity(foodsWithVitamins)
+        }
+        binding.backBtnComparison.setOnClickListener {
+            val goToDatabaseActivity = Intent(this,DatabaseActivity::class.java).apply {
+                putExtra("vitaminID",vitaminID)
+            }
+            startActivity(goToDatabaseActivity)
         }
     }
 }

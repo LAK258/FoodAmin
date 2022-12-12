@@ -33,6 +33,9 @@ class BarcodeScanningActivity : AppCompatActivity() {
         binding = ActivityBarcodeScanningBinding.inflate(layoutInflater) // connects the binding variable to the layout file
         setContentView(binding.root) // set which layout file to view
 
+
+        supportActionBar?.hide()
+
         if (ContextCompat.checkSelfPermission(
                 this@BarcodeScanningActivity, android.Manifest.permission.CAMERA
             ) != PackageManager.PERMISSION_GRANTED
@@ -149,7 +152,7 @@ class BarcodeScanningActivity : AppCompatActivity() {
         super.onDestroy()
         cameraSource.stop()
         val database = Intent(this, DatabaseActivity::class.java).apply {
-            putExtra("vitaminID", dbValue)
+            putExtra("vitaminID", 38)
         }
         startActivity(database)
     }

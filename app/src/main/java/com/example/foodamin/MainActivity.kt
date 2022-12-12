@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater) // connects the binding variable to the layout file
         setContentView(binding.root) // set which layout file to view
 
+        supportActionBar?.hide()
 
         binding.find.setOnClickListener { //if no bottle available
             val database = Intent(this, DatabaseActivity::class.java).apply {
