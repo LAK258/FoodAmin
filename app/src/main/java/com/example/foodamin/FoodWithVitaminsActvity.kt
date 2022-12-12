@@ -35,7 +35,6 @@ class FoodWithVitaminsActvity : AppCompatActivity() {
         //val foodsWithVitamins = foodDB.foodDao().findItemVitamin(vitaminProduct[0].ParameterID) // finds all items containing the vitamin bottles' vitamin and sorts them in descending order in a list. this will not be used in the test version
 
         // layout
-        binding.whatisVitaminGrams.text = vitaminProduct[0].Vitamin
 
         //bellPepper
         val bellPepper = foodDB.foodDao().usabilityTestQuery("Pepper, sweet, red, raw")
