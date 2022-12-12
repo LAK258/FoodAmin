@@ -48,6 +48,10 @@ class ComparisonActivity : AppCompatActivity() {
         binding.foodRiComparison.text = foodPercentageRiPillCalc
 
             //vitamin
+
+
+
+
         binding.vitaminNameComparison.text = vitaminProduct[0].Vitamin
         val amountGramsString = "${vitaminProduct[0].Contains} ${vitaminProduct[0].Unit}" // set in function textCreator
         binding.pillGramsComparison.text = amountGramsString
@@ -60,7 +64,9 @@ class ComparisonActivity : AppCompatActivity() {
             startActivity(scanActivity)
         }
         binding.foodWithVitaminComparisonBtn.setOnClickListener {
-            val foodsWithVitamins = Intent(this, FoodWithVitaminsActvity::class.java)
+            val foodsWithVitamins = Intent(this, FoodWithVitaminsActvity::class.java).apply {
+                putExtra("vitaminID", vitaminID)
+            }
             startActivity(foodsWithVitamins)
         }
     }
