@@ -14,4 +14,6 @@
     <string name="WhatIsUpperLimit"><b>What is UL?</b></string>
     <string name="whatIsRiText">100%RI tells you the minimum amount of a vitamin that is required to avoid deficiency in the majority of the population. <b>Achieving 80 mg (100%RI) of Vitamin C, is comparable to eating half a small bell pepper.</b></string>
     <string name="WhatIsUpperLimitText">The UL (<b>Tolerable Upper Intake Level</b>) for vitamin C is between 1.000 and 2.000 mg. Taking large amounts (more than 1,000mg per day) of vitamin C <b>can cause stomach pain and diarrhoea.</b> These symptoms should disappear once you stop taking vitamin C supplements.</string>
+    <string name="WhatIsCVitamin"><b>What is C-Vitamin</b></string>
+    <string name="WhatIsCVitaminText">Vitamin C is a water-soluble vitamin. This means that it dissolves in water and is not well stored, so it <b>must be taken daily through food or supplements.</b> Because your body doesn't produce vitamin C, you need to get it from your diet. <b>Vitamin C deficiency results in impaired immunity and higher susceptibility to infections.</b></string>
 </resources>
